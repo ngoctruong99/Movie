@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+    @model EstateWeb.Models.ResponseModels.IndexNewsModel;
+}
+
+
+
+<div>
+    <div class="page-title.product-view">
+        <h1>Detail</h1>
+        <hr class="hr.new4">
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <img class="card-img-top" src="@Model.ImgUrl" alt="" style="width:100%;height:400px">
+        </div>
+        <div class="col-md-9">
+            <h1>@Model.Title</h1>
+            <hr>
+            <p>Category: @Model.Category</p>
+            <p>Duration: @Model.Duration</p>
+            <p>Premiere: @Model.Premiere</p>
+            <p>Directors: @Model.Directors</p>
+            <p>Cast: @Model.Cast</p>
+            <p>Language :@Model.Language</p>
+            <p>Rated: @Model.Rated</p>
+            <button type="button" class="btn btn-primary" onclick="Book(@Model.MovieId)">Book</button>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hahaha">Đặt </button>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="hahaha">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-input-movie" method="post">
+                        <div>
+                            <label>Chon ngay(<span class="text-red">*</span>)</label>
+                            <div class="col-sm-8">
+                                <select id="slbDateMovie" name="DateMovie">
+                                    <option value="0">---Chọn Ngay---</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Chon Room(<span class="text-red">*</span>)</label>
+                            <div class="col-sm-8">
+                                <select id="slbRoom" name="Room">
+                                    <option value="0">---Chọn Room---</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Chon Seat(<span class="text-red">*</span>)</label>
+                            <div class="col-sm-8">
+                                <select id="slbSeat" name="Seat">
+                                    <option value="0">---Chọn Seat---</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                    </form>>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

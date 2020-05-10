@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    @model IEnumerable<EstateWeb.Models.ResponseModels.IndexNewsModel>
+}
+    <div class="container">
+
+
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3" style="width:100%;height:auto; margin-top:30px">
+                    <div class="card">
+                        <div>
+                            <img class="card-img-top" src="@item.ImgUrl" alt="" style="width:100%;height:400px">
+                        </div>
+                        <div class="card-body" style="width:100%;height:200px">
+                            <h6 style="width:100%;height:20px" class="card-title">@item.Title</h6>
+                            <a class="card-text">Thể loại: @item.Category </a>
+                            <p class="card-text">Thời lượng: @item.Duration </p>
+                            <p class="card-img-bottom">Khởi chiếu: @item.Premiere </p>
+                            <button class="ct_brief1" onclick="GotoDetail(@item.MovieId)">< Xem chi tiết ></button>
+                        </div>
+                    </div>
+                </div>
+                
+            }
+        </div>
+    </div>

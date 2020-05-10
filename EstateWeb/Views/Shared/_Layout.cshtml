@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EstateWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/News/InputNews.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.5.0/jquery.serialize-object.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="News" asp-action="Index">EstateWeb</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="row">
+
+
+                    <!--Phim-->
+                    <div class="dropdown show">
+                        <a class="btn btn-outline-secondary href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Phim
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Đang Chiếu </a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Sấp Chiếu</a>
+                        </div>
+                    </div>
+
+                    <!--Rap-->
+                    <div class="dropdown show">
+                        <a class="btn btn-outline-secondary href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rap
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Tất Cả Rạp</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Rạp Đặc Biệt</a>
+                        </div>
+                    </div>
+                    <!--Thanh vien-->
+                    <div class="dropdown show">
+                        <a class="btn btn-outline-secondary href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Thành Viên
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Tài Khoảng</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Quyền Lợi</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown show">
+                        <a class="btn btn-outline-secondary href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Up
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" asp-area="" asp-controller="Movie" asp-action="Input">Input</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Movie" asp-action="Index">Index</a>
+                        </div>
+                    </div>
+                </div>
+                 
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" style="background-color:white">
+        <div class="container">
+            &copy; 2020 - EstateWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

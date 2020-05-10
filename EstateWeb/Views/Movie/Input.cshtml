@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewData["Title"] = "Input";
+}
+
+<h1>Input</h1>
+
+
+<div class="container">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <form id="form-input-movie" method="post">
+
+                <div class="form-group">
+                    <label>Title</label>
+                    <input name="Title" type="text" class="form-control" placeholder="Tiêu đề">
+                </div>
+                <div class="form-group">
+                    <label>Genre</label>
+                    <input name="Category" type="text" class="form-control" placeholder="Thể loại">
+                </div>
+                <div class="form-group">
+                    <label>Running time</label>
+                    <input name="Duration" type="text" class="form-control" placeholder="Thời lượng">
+                </div>
+                <div class="form-group">
+                    <label>Release date</label>
+                    <input name="Premiere" type="date" class="form-control" placeholder="Ngày phát hànhr">
+                </div>
+                <div class="form-group">
+                    <label>Directors</label>
+                    <input name="Directors" type="text" class="form-control" placeholder="Đạo diễn">
+                </div>
+                <div class="form-group">
+                    <label>Cast</label>
+                    <input name="Cast" type="text" class="form-control" placeholder="Diễn viên">
+                </div>
+                <div class="form-group">
+                    <label>Language</label>
+                    <input name="Language" type="text" class="form-control" placeholder="Ngôn ngữ">
+                </div>
+                <div class="form-group">
+                    <label>Rated</label>
+                    <input name="Rated" type="text" class="form-control" placeholder="Rated">
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <input name="ImgUrl" type="text" class="form-control" placeholder="Poster link">
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmInputNews">Đăng tin </button>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <form id="form-input-room" method="post">
+                <div class="form-group">
+                    <label>Room ID</label>
+                    <input name="RoomId" type="text" class="form-control" placeholder="Room Name">
+                </div>
+                <div class="form-group">
+                    <label>Type</label>
+                    <input name="RoomType" type="text" class="form-control" placeholder="Room Name">
+                </div>
+                <div class="form-group">
+                    <label>Total Seat</label>
+                    <input name="TotalSeat" type="number" class="form-control" placeholder="Room Name">
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmInputRoom">Đăng tin </button>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"></div>
+    </div>
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="confirmInputNews">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Xác nhận</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="InputNews()">Đăng tin</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="confirmInputRoom">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Xác nhận</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="InputRoom()">Đăng tin</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
